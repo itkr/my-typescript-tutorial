@@ -60,3 +60,25 @@ console.log(fuga('A'));
 function fnc(): [string, string, number] {
     return ['x', 'y', 1];
 }
+
+// デフォルト引数
+function fnc1(x: number = 1): number {
+    return x + 1;
+}
+// オプション引数
+function fnc2(x?: number): number {
+    return 2 * (x === undefined ? 1 : x);
+}
+// 可変長引数
+function fnc3(...x: number[]): number {
+    let res: number = 0;
+    x.forEach((i: number): void => {
+        res += i;
+    })
+    return res;
+}
+
+// 型アサーション
+let val1: any = 'abcde';
+console.log((<string>val1).length);
+console.log((val1 as string).length);
