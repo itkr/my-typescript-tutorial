@@ -31,3 +31,32 @@ enum Color {
     BLUE
 }
 console.log(Color.BLUE)
+
+// 例外
+try {
+    throw 'err';
+} catch (e) {
+    console.log(e);
+} finally {
+}
+
+// 関数
+function add(a: number, b: number): number {
+    return a + b;
+}
+// 返り値なし
+function shout(s: string): void {
+    alert(`${s}!`);
+}
+// 関数リテラル
+let hoge = function (): void {
+}
+// アロー関数
+let fuga = (x: string): string => {
+    return x + x;
+}
+console.log(fuga('A'));
+// タプルを返す
+function fnc(): [string, string, number] {
+    return ['x', 'y', 1];
+}
